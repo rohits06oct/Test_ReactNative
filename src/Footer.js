@@ -28,9 +28,9 @@ const Footer = () => {
         <Text style={styles.trustedText}>Trusted by Millions</Text>
         <View style={styles.trustItems}>
             {[
-            { text: "Best Matches", icon: require("./assets/matches_PNG4777.png") },
-            { text: "Verified Profiles", icon: require("./assets/matches_PNG4777.png") },
-            { text: "100% Privacy", icon: require("./assets/matches_PNG4777.png") }
+            { text: "Best Matches", icon: require("./assets/79462.png") },
+            { text: "Verified Profiles", icon: require("./assets/verified90.webp") },
+            { text: "100% Privacy", icon: require("./assets/4104800.png") }
             ].map((item, index) => (
             <View key={index} style={styles.trustItem}>
                 <Image source={item.icon} style={styles.trustIcon} />
@@ -56,7 +56,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <Text style={styles.copyright}>
-        © 1996-2025 Shaadi.com, The World's Leading Matchmaking Service™
+        © 2025 marrige.com, The World's Leading Matchmaking Service™
       </Text>
       <TouchableOpacity onPress={() => Linking.openURL("#")}>
         <Text style={styles.createdBy}>Passionately created by People Group ➤</Text>
@@ -100,8 +100,8 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   trustIcon: {
-    width: 24,  // Adjust as needed
-    height: 24, // Adjust as needed
+    width: 35,  // Adjust as needed
+    height: 35, // Adjust as needed
     marginRight: 8,
     resizeMode: "contain",
   },
