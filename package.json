@@ -15,7 +15,9 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-native": "0.77.0",
+    "react-native-gesture-handler": "^2.22.1",
     "react-native-web": "^0.19.13",
+    "react-router-dom": "^7.1.4",
     "react-scripts": "^5.0.1"
   },
   "devDependencies": {

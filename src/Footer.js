@@ -1,9 +1,10 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Linking } from "react-native";
+import { ScrollView, View, Text, StyleSheet, TouchableOpacity, Linking } from "react-native";
 import { Image } from "react-native";
 
 const Footer = () => {
   return (
+    <ScrollView style={styles.scrollContainer}>
     <View style={styles.container}>
       {/* Country Links */}
       <View style={styles.countryLinks}>
@@ -46,8 +47,8 @@ const Footer = () => {
           <View key={index} style={styles.footerColumn}>
             <Text style={styles.footerHeading}>{section.title}</Text>
             {section.links.map((link, i) => (
-              <TouchableOpacity key={i} onPress={() => Linking.openURL("#")}>
-                <Text style={styles.footerLink}>{link}</Text>
+              <TouchableOpacity key={i} onPress={() => Linking.openURL(link.url)}>
+                <Text style={styles.footerLink}>{link.name}</Text>
               </TouchableOpacity>
             ))}
           </View>
@@ -62,6 +63,7 @@ const Footer = () => {
         <Text style={styles.createdBy}>Passionately created by People Group ➤</Text>
       </TouchableOpacity>
     </View>
+    </ScrollView>
   );
 };
 
@@ -69,19 +71,49 @@ const Footer = () => {
 const footerData = [
   {
     title: "Need Help?",
-    links: ["Member Login", "Sign Up", "Partner Search", "How to Use Shaadi.com", "Premium Memberships", "Customer Support", "Site Map"],
+    links: [
+      { name: "Member Login", url: "http://localhost:3000/registration/user/login" },
+      { name: "Sign Up", url: "https://www.shaadi.com/sign-up" },
+      { name: "Partner Search", url: "https://www.shaadi.com/partner-search" },
+      { name: "How to Use Shaadi.com", url: "https://www.shaadi.com/how-to-use" },
+      { name: "Premium Memberships", url: "https://www.shaadi.com/premium-memberships" },
+      { name: "Customer Support", url: "https://www.shaadi.com/customer-support" },
+      { name: "Site Map", url: "https://www.shaadi.com/site-map" },
+    ],
   },
   {
     title: "Company",
-    links: ["About Us", "Shaadi Blog", "Careers", "Awards & Recognition", "Cov-Aid", "Contact Us"],
+    links: [
+      { name: "About Us", url: "https://www.shaadi.com/about" },
+      { name: "Shaadi Blog", url: "https://www.shaadi.com/blog" },
+      { name: "Careers", url: "https://www.shaadi.com/careers" },
+      { name: "Awards & Recognition", url: "https://www.shaadi.com/awards" },
+      { name: "Cov-Aid", url: "https://www.shaadi.com/cov-aid" },
+      { name: "Contact Us", url: "https://www.shaadi.com/contact" },
+    ],
   },
   {
     title: "Privacy & You",
-    links: ["Terms of Use", "Privacy Policy", "Be Safe Online", "Report Misuse"],
+    links: [
+      { name: "Terms of Use", url: "https://www.shaadi.com/terms-of-use" },
+      { name: "Privacy Policy", url: "https://www.shaadi.com/privacy-policy" },
+      { name: "Be Safe Online", url: "https://www.shaadi.com/safety" },
+      { name: "Report Misuse", url: "https://www.shaadi.com/report-misuse" },
+    ],
   },
   {
     title: "More",
-    links: ["VIP Shaadi", "Select Shaadi", "Sangam", "Shaadi Centres", "Success Stories", "Shaadi Live", "Elite Matrimony by Shaadi.com", "Astrochat.com", "Chat with Astrologers"],
+    links: [
+      { name: "VIP Shaadi", url: "https://www.shaadi.com/vip-shaadi" },
+      { name: "Select Shaadi", url: "https://www.shaadi.com/select-shaadi" },
+      { name: "Sangam", url: "https://www.shaadi.com/sangam" },
+      { name: "Shaadi Centres", url: "https://www.shaadi.com/shaadi-centres" },
+      { name: "Success Stories", url: "https://www.shaadi.com/success-stories" },
+      { name: "Shaadi Live", url: "https://www.shaadi.com/shaadi-live" },
+      { name: "Elite Matrimony by Shaadi.com", url: "https://www.shaadi.com/elite-matrimony" },
+      { name: "Astrochat.com", url: "https://www.astrochat.com" },
+      { name: "Chat with Astrologers", url: "https://www.shaadi.com/chat-with-astrologers" },
+    ],
   },
 ];
 
@@ -92,6 +124,9 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
     paddingHorizontal: 20,
     alignItems: "center",
+  },
+  scrollContainer: {
+    flex: 1,
   },
   countryLinks: {
     flexDirection: "row",
