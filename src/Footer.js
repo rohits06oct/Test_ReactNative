@@ -73,7 +73,7 @@ const footerData = [
     title: "Need Help?",
     links: [
       { name: "Member Login", url: "http://localhost:3000/registration/user/login" },
-      { name: "Sign Up", url: "https://www.shaadi.com/sign-up" },
+      { name: "Sign Up", url: "http://localhost:3000/registration/user/signup" },
       { name: "Partner Search", url: "https://www.shaadi.com/partner-search" },
       { name: "How to Use Shaadi.com", url: "https://www.shaadi.com/how-to-use" },
       { name: "Premium Memberships", url: "https://www.shaadi.com/premium-memberships" },
