@@ -6,7 +6,6 @@ import SignUpScreen from "./SignUpScreen";
 
 const AppContent = () => {
   const location = useLocation();
-  
   return (
     <>
       <Routes>
@@ -16,7 +15,6 @@ const AppContent = () => {
       <Routes>
         <Route path="/registration/user/signup" element={<SignUpScreen />} />
       </Routes>
-      
       {/* Show Footer only on home ("/") route */}
       {location.pathname === "/" && <Footer />}
     </>
