@@ -74,8 +74,8 @@ const footerData = [
     links: [
       { name: "Member Login", url: "http://localhost:3000/registration/user/login" },
       { name: "Sign Up", url: "http://localhost:3000/registration/user/signup" },
-      { name: "Partner Search", url: "https://www.shaadi.com/partner-search" },
-      { name: "How to Use Shaadi.com", url: "https://www.shaadi.com/how-to-use" },
+      { name: "Partner Search", url: "http://localhost:3000/registration/user/homescreen" },
+      { name: "How to Use Shaadi.com", url: "http://localhost:3000/registration/user/responsescreen" },
       { name: "Premium Memberships", url: "https://www.shaadi.com/premium-memberships" },
       { name: "Customer Support", url: "https://www.shaadi.com/customer-support" },
       { name: "Site Map", url: "https://www.shaadi.com/site-map" },
